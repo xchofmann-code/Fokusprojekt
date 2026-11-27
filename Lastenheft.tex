@@ -42,27 +42,33 @@ Das Projekt untersucht daher die Möglichkeiten einer gezielten Unterdrückung v
 %Den jetzigen Stand der Signalfilterung zur Erheben anhand eigensdurchgeführter standartisierten Messungen und anhand dieser und einer Marktforschung die Tonverarbeitung anzupassen. Die Messdaten der vorherigen Gruppe werden in Betracht gezogen und mit unseren erhobenen Daten verglichen. Am Ende unseres Projektes sollen die Störgeräusche weniger vernommen werden und in einem Gespräch (auch in lauter Umgebung) die gesprochenen Worte als Text auf einer ausgewählten Bildausgabe verschriftlich werden.  
 Unser Projekt wird sich mit den drei Zielen auseinandersetzten:
 \begin{enumerate}
-    \item Ziel 1: Geräuschutnerdrückung
-
+    \item Ziel 1: Geräuschunterdrückung
+         \subitem Reduktion störender akaustischer Signale, denen der Nutzer ausgesetzt ist
     \item Ziel 2: Sprachverständlichkeit
-
-    \item Ziel 3 Sprachtransskription
+        \subitem Erhalt und Verbesserung der Verständlichkeit gesprochener Sprache bei Hintergrundgeräuschen
+    \item Ziel 3\ Sprachtransskription
+        \subitem Umwandlung gesprocheneer Sprache in digital darstellbaren Text
 \end{enumerate}
 
 \subsection{Abgrenzung des Projekts}
-Ziel dieser Studentenarbeit ist es innerhalb der vorgegebenen Zeiten ein 
-zwei Untergruppen sich die folgenden Ziele zu erarbeiten: 
-\begin{itemize}
-    \item Erfassen alles theoretischen Grundlagen der technischen Umsetzung, inklusiver Marktforschung
-    \item Überprüfung der praktischen Umsetzung der Ziele im Rahmen der technisch- und softwarebegrenzenden Möglichkeiten
-    \item Umsetzung der Ziele in der Software
-    \item Durchführung Messungen zum Überprüfen der bisherigen Software und die Ergänzungen der Gruppe
-\end{itemize}
+% Ziel dieser Studierendenenarbeit ist es innerhalb der vorgegebenen Zeiten ein 
+% zwei Untergruppen sich die folgenden Ziele zu erarbeiten: 
+% \begin{itemize}
+%     \item Erfassen alles theoretischen Grundlagen der technischen Umsetzung, inklusiver Marktforschung
+%     \item Überprüfung der praktischen Umsetzung der Ziele im Rahmen der technisch- und softwarebegrenzenden Möglichkeiten
+%     \item Umsetzung der Ziele in der Software
+%     \item Durchführung Messungen zum Überprüfen der bisherigen Software und die Ergänzungen der Gruppe
+% \end{itemize}
 
-Eine Untergruppe besteht aus . Diese beschäftigt sich mit Text-to-Speech, indem Gespräche in unmittelbarer Umgebung verarbeitet werden und in einer Textform ausgegeben wird. \\
-Die andere Untergruppe, bestehend aus Felix, Elmo, beschäftigt sich mit der Filterung des Umgebungslärmes, das im Arbeitumfeld zu einer großen Belastung und gesundheitlichen Bedrohung wird. Unser Ziel ist es den Hintergrundlärm zu messen, analysieren und eine Active Noise Cancelling und besser Geräuschfilterung zu implementieren.\\
+% Eine Untergruppe besteht aus . Diese beschäftigt sich mit Text-to-Speech, indem Gespräche in unmittelbarer Umgebung verarbeitet werden und in einer Textform ausgegeben wird. \\
+% Die andere Untergruppe, bestehend aus Felix, Elmo, beschäftigt sich mit der Filterung des Umgebungslärmes, das im Arbeitumfeld zu einer großen Belastung und gesundheitlichen Bedrohung wird. Unser Ziel ist es den Hintergrundlärm zu messen, analysieren und eine Active Noise Cancelling und besser Geräuschfilterung zu implementieren.\\
 
-Dieses Lastenheft legt die Anforderungen für ein Gerät zur Schallmessung, Filterung und Sprachausgabe. Zusätzlich werden die Rahmenbedingungen beschrieben in welchen dieses Projekt zu verlaufen hat, um das Fokusprojekt erfolgreich zu absolvieren.
+% Dieses Lastenheft legt die Anforderungen für ein Gerät zur Schallmessung, Filterung und Sprachausgabe. Zusätzlich werden die Rahmenbedingungen beschrieben in welchen dieses Projekt zu verlaufen hat, um das Fokusprojekt erfolgreich zu absolvieren.
+Die Bestandteile des Projektes sind Untersuchung der vorhandenen Hard- und Software, die Optimierung der Firmware und Software, die GEräuschunterdrückung, Sprachtranskription, messtechnisch Untersuchung und Entwicklung einer Prototypsoftwarelösung. 
+Folgende Aufgaben sind nicht bestandteil des Projektes: 
+Entwicklung neuer Hardware und eigener Sensoren, Vollständige Eliminierung sämtlicher Geräusche, Übersetzung in eine andere Sprache, Industrielle Produktzulassung und Zertifizierung als Gehörschutz.
+Unser Projekt wird sich lediglich mit dem Forschen und Messen den oben genannten Zielen auseinandersetzen.
+
 
 \pagebreak
 
@@ -102,17 +108,45 @@ Das große gemeinsame Ziel ist es die bestmögliche Filterung von Umgebungsgerä
 \subsection{Allgemeine Anforderungen}
 Die allgemeine Forderung, die wir an unsere Umsetzung setzten setzt sich wie folgt zusammen:
 \begin{itemize}
-    \item Die Unterdrückung der Geräusche im Bereich von Hz um ein Drittel zu steigern
+    \item Die Unterdrückung der Geräusche im Bereich von Hz um ein Drittel zu steigern %todo richtigen Wert einfügen, das nur ein beispiel und keine gute beschreibung
     \item Die Textausgabe sicher von einfachen Gesprächen zu ermöglichen 
     \item Die Softwareimplementierung möglichst perfomant und laufzeitschonend umzusetzen
 \end{itemize}
 
 \subsection{Funktionale Anforderungen}
-%Todo mit Rauschunerdrückkung
+
+
 
 \subsection{Nichtfunktionen Anforderungen}
 %todo 
-
+\begin{tabular}{ |s|p{2 cm}|p{2 cm}|  }
+%\newcolumntype{s}{>{\columncolor[HTML]{AAACED}} p{3cm}}
+\hline
+\rowcolor{Turquoise} 
+\arrayrulecolor[HTML]{DB5800}
+\centering
+%\multicolumn{3}{|c|}{Sensoren} \\
+ID & Kategorie & Anforderung \\
+\hline
+         NF01 & Signalqualität & Verbesserung der Geräuschunterdrückung um mindestens X dB im definierten Frequenzbereich \\   %todo Wert einfügen
+\hline
+         NF02 & Latenz & Maximal zulässige Verzögerung der Audioverarbeitung\\
+\hline
+         NF03 & Genauigkeit & Maximal zulässige Wortfehlerrate der Transskription \\     % todo Wert einfügen
+\hline
+         NF04 & Ressourcen & Einhaltung der verfügbaren Rechen- und Speicherkapazitäten \\
+\hline
+         NF05 & Energieeffizienz & Einhaltung einer definerten Mindestbetriebdauer \\  %todo am bestsen einen Wert einfügen der für anwendung auf bau odedr  so sinnvoll ist
+\hline
+          NF06 & Sicherheit & Vermeidung gesundheitsgefährdender Schallpegelexposition \\
+\hline
+          NF07 & Datenschutz & Schutz personenbezogener Sprachaufzeichnungen \\
+\hline
+         NF08 & Wartbarkeit & Nachvollziehbarer und dokumentierter Quellcode\\
+\hline
+         NF09 & Zuverlässigkeit & Stabiler Betrieb während definierter Tagesräume \\
+\hline
+\end{tabular}
 
 \subsection{Gruppenspezifische Anforderungen}
 Unsere Gruppe setzt sich eine möglichst effiziente und geordnete Arbeit in Untergruppen mit guter Kommunikation als wichtiges Ziel anzusehen. Jegliche Fortschritte und Ergebnisse werden in regelmäßig durchgeführten Sitzungen ausgetauscht und intermittend für alle Mitglieder einsehbar digital festgehalten.
@@ -124,7 +158,32 @@ Das wissenschaftliche Arbeiten, Erlernen von neuem Wissen und das Aufrechterhalt
 \subsection{Priorisierung der Anforderungen}
 Als oberstes Ziel steht das Gruppenverständnis, dass Gemeinsam an einem großen Ziel arbeitet wird, selbst wenn die Aufgaben der einzelnen Mitglieder sich auch vonaneinader unterscheiden. Eine gute Kommunikation und ständige Unterrichtung Zwischenstände sind als verständlich anzusehen. 
 Danach folgt die Arbeit an Signalverarbeitung und -filterung mit anschlißenender Textausgabe.
-
+\begin{tabular}{ |s|p{2 cm}|p{2 cm}|  }
+%\newcolumntype{s}{>{\columncolor[HTML]{AAACED}} p{3cm}}
+\hline
+\rowcolor{Turquoise} 
+\arrayrulecolor[HTML]{DB5800}
+\centering
+%\multicolumn{3}{|c|}{Sensoren} \\
+ID & Anforderung & Priorität \\
+\hline
+         F01 & System muss akustische Umgebungssignale erfassen können & Muss \\
+\hline
+         F02 & System muss störende Umgebungsgeräusche in einem definierten Frequenzbereich reduzieren & Muss \\
+\hline
+         F03 & System muss gesprochene Sprache erfassen und in Text umwandeln können & Muss \\
+\hline
+         F04 & System muss den erzeugten Text auf einem externen Endgerät darstellen können mit einer gewissen Qualität & Muss \\
+\hline
+         F05 & System muss relevante Messdaten digital aufzeichnen können & Muss \\
+\hline
+          F06 & Sprachverständlichkeit soll bei vorhandenen Störgeräuschen verbessert werden & Soll \\
+\hline
+          F07 & Die Geräuschunterdruckung soll in ihrer Intensität anpassbar sein & Soll \\
+\hline
+         F08 & System soll in der Lage sein die restliche Belastung der Geräusche zu bewerten und eine Warnung bei einem Grenzwert zu auslösen & Kann \\
+\hline
+\end{tabular}
 
 \section{Technische Rahmenbedingungen}
 
@@ -133,16 +192,16 @@ Vom Hersteller sind folgende Bestandteile, neben der Aufbewahrung und austauschb
 
 \begin{itemize}
     \item Folgende Bestandteile sind Sensoren:
-    \subitem  Eine 9-Achsen Bewegungssensor (zusätzliche Messung möglicher Deformationen des Ohrkanals)
-    \subitem ein Drei-Wellenlänge Photoplethysmograph (infratrot, rot und grün PPG Sensoren + Pulsoximeter)
-    \subitem einen Drucksensor (Messung des Innendruck des Hörkanals) 
-    \subitem Zwei Mikrophone (Luftübertragung und Knochenübertragung, Ultra- und Infrasound, Schnittstelle zur Aufnahme oder des Streamings)
-    \subitem einen optischen Temperatursensor (Messung Hauttemperatur)
+        \subitem  Eine 9-Achsen Bewegungssensor (zusätzliche Messung möglicher Deformationen des Ohrkanals)
+        \subitem ein Drei-Wellenlänge Photoplethysmograph (infratrot, rot und grün PPG Sensoren + Pulsoximeter)
+        \subitem einen Drucksensor (Messung des Innendruck des Hörkanals) 
+        \subitem Zwei Mikrophone (Luftübertragung und Knochenübertragung, Ultra- und Infrasound, Schnittstelle zur Aufnahme oder des Streamings)
+        \subitem einen optischen Temperatursensor (Messung Hauttemperatur)
     \item Restliche verbaute Bestandteile:
-    \subitem Eine Knopfbatterie
-    \subitem Einen USB-Anschluss
-    \subitem einen Druckknopf und eine RGB-LED
-    \subitem Dynamic Driver-Lautsprecher
+        \subitem Eine Knopfbatterie
+        \subitem Einen USB-Anschluss
+        \subitem einen Druckknopf und eine RGB-LED
+        \subitem Dynamic Driver-Lautsprecher
     \item Das Außengehäuse
 \end{itemize}  
     
