@@ -4,6 +4,8 @@
 \usepackage{siunitx}[=v2] % For 's' column type in tabular
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{tabularx}
 \usepackage[table]{xcolor}
 \usepackage{xcolor}
 \usepackage[dvipsnames]{xcolor}
@@ -119,12 +121,11 @@ Die allgemeine Forderung, die wir an unsere Umsetzung setzten setzt sich wie fol
 
 \subsection{Nichtfunktionen Anforderungen}
 %todo 
-\begin{tabular}{ |s|p{2 cm}|p{2 cm}|  }
+\begin{tabularx}{\textwidth}{ |>{\centering\arraybackslash}p{1.1cm}|>{\raggedright\arraybackslash}p{2.8cm}|>{\raggedright\arraybackslash}X| }
 %\newcolumntype{s}{>{\columncolor[HTML]{AAACED}} p{3cm}}
 \hline
 \rowcolor{Turquoise} 
 \arrayrulecolor[HTML]{DB5800}
-\centering
 %\multicolumn{3}{|c|}{Sensoren} \\
 ID & Kategorie & Anforderung \\
 \hline
@@ -146,7 +147,7 @@ ID & Kategorie & Anforderung \\
 \hline
          NF09 & Zuverlässigkeit & Stabiler Betrieb während definierter Tagesräume \\
 \hline
-\end{tabular}
+\end{tabularx}
 
 \subsection{Gruppenspezifische Anforderungen}
 Unsere Gruppe setzt sich eine möglichst effiziente und geordnete Arbeit in Untergruppen mit guter Kommunikation als wichtiges Ziel anzusehen. Jegliche Fortschritte und Ergebnisse werden in regelmäßig durchgeführten Sitzungen ausgetauscht und intermittend für alle Mitglieder einsehbar digital festgehalten.
@@ -158,12 +159,11 @@ Das wissenschaftliche Arbeiten, Erlernen von neuem Wissen und das Aufrechterhalt
 \subsection{Priorisierung der Anforderungen}
 Als oberstes Ziel steht das Gruppenverständnis, dass Gemeinsam an einem großen Ziel arbeitet wird, selbst wenn die Aufgaben der einzelnen Mitglieder sich auch vonaneinader unterscheiden. Eine gute Kommunikation und ständige Unterrichtung Zwischenstände sind als verständlich anzusehen. 
 Danach folgt die Arbeit an Signalverarbeitung und -filterung mit anschlißenender Textausgabe.
-\begin{tabular}{ |s|p{2 cm}|p{2 cm}|  }
+\begin{tabularx}{\textwidth}{ |>{\centering\arraybackslash}p{1.1cm}|>{\raggedright\arraybackslash}X|>{\centering\arraybackslash}p{1.7cm}| }
 %\newcolumntype{s}{>{\columncolor[HTML]{AAACED}} p{3cm}}
 \hline
 \rowcolor{Turquoise} 
 \arrayrulecolor[HTML]{DB5800}
-\centering
 %\multicolumn{3}{|c|}{Sensoren} \\
 ID & Anforderung & Priorität \\
 \hline
@@ -183,7 +183,7 @@ ID & Anforderung & Priorität \\
 \hline
          F08 & System soll in der Lage sein die restliche Belastung der Geräusche zu bewerten und eine Warnung bei einem Grenzwert zu auslösen & Kann \\
 \hline
-\end{tabular}
+\end{tabularx}
 
 \section{Technische Rahmenbedingungen}
 
@@ -213,12 +213,11 @@ Die Kopfhörer sind sowohhl Speicher für die Software als auch Träger der Sens
 
 \subsection{Messgrößen und Messbereiche}
 
-\begin{tabular}{ |s|p{2cm}|p{2cm}|  }
+\begin{tabularx}{\textwidth}{ |>{\raggedright\arraybackslash}p{4.1cm}|>{\centering\arraybackslash}p{3.2cm}|>{\centering\arraybackslash}X| }
 %\newcolumntype{s}{>{\columncolor[HTML]{AAACED}} p{3cm}}
 \hline
 \rowcolor{Thistle} 
 \arrayrulecolor[HTML]{DB5800}
-\centering
 %\multicolumn{3}{|c|}{Sensoren} \\
 Sensor & Micro-SD Aufzeichnung & Kabellose Übertragung \\
 \hline
@@ -234,7 +233,7 @@ Sensor & Micro-SD Aufzeichnung & Kabellose Übertragung \\
 \hline
          Ohrkanaldrucksensor & 200 Hz & 200 Hz \\
 \hline
-\end{tabular}
+\end{tabularx}
 
 \section{Validierung und Abnahmekriterien}
     \subsection{Mess- und Testbedingungen}
