@@ -45,11 +45,11 @@ Das Projekt untersucht daher die Möglichkeiten einer gezielten Unterdrückung v
 Unser Projekt wird sich mit den drei Zielen auseinandersetzten:
 \begin{enumerate}
     \item Ziel 1: Geräuschunterdrückung
-         \subitem Reduktion störender akaustischer Signale, denen der Nutzer ausgesetzt ist
+    \subitem Reduktion störender akaustischer Signale, denen der Nutzer ausgesetzt ist
     \item Ziel 2: Sprachverständlichkeit
-        \subitem Erhalt und Verbesserung der Verständlichkeit gesprochener Sprache bei Hintergrundgeräuschen
-    \item Ziel 3\ Sprachtransskription
-        \subitem Umwandlung gesprocheneer Sprache in digital darstellbaren Text
+    \subitem Erhalt und Verbesserung der Verständlichkeit gesprochener Sprache bei Hintergrundgeräuschen
+    \item Ziel 3: Sprachtranskription
+    \subitem Umwandlung gesprocheneer Sprache in digital darstellbaren Text
 \end{enumerate}
 
 \subsection{Abgrenzung des Projekts}
@@ -66,8 +66,8 @@ Unser Projekt wird sich mit den drei Zielen auseinandersetzten:
 % Die andere Untergruppe, bestehend aus Felix, Elmo, beschäftigt sich mit der Filterung des Umgebungslärmes, das im Arbeitumfeld zu einer großen Belastung und gesundheitlichen Bedrohung wird. Unser Ziel ist es den Hintergrundlärm zu messen, analysieren und eine Active Noise Cancelling und besser Geräuschfilterung zu implementieren.\\
 
 % Dieses Lastenheft legt die Anforderungen für ein Gerät zur Schallmessung, Filterung und Sprachausgabe. Zusätzlich werden die Rahmenbedingungen beschrieben in welchen dieses Projekt zu verlaufen hat, um das Fokusprojekt erfolgreich zu absolvieren.
-Die Bestandteile des Projektes sind Untersuchung der vorhandenen Hard- und Software, die Optimierung der Firmware und Software, die GEräuschunterdrückung, Sprachtranskription, messtechnisch Untersuchung und Entwicklung einer Prototypsoftwarelösung. 
-Folgende Aufgaben sind nicht bestandteil des Projektes: 
+Die Bestandteile des Projektes sind Untersuchung der vorhandenen Hard- und Software, die Optimierung der Firmware und Software, die Geräuschunterdrückung, Sprachtranskription, messtechnisch Untersuchung und Entwicklung einer Prototypsoftwarelösung. 
+Folgende Aufgaben sind klar abgrenzbar und werden nicht Bestandteil des Projektes sein:
 Entwicklung neuer Hardware und eigener Sensoren, Vollständige Eliminierung sämtlicher Geräusche, Übersetzung in eine andere Sprache, Industrielle Produktzulassung und Zertifizierung als Gehörschutz.
 Unser Projekt wird sich lediglich mit dem Forschen und Messen den oben genannten Zielen auseinandersetzen.
 
@@ -116,7 +116,7 @@ Die allgemeine Forderung, die wir an unsere Umsetzung setzten setzt sich wie fol
 \end{itemize}
 
 \subsection{Funktionale Anforderungen}
-
+%todo mit den genauen werten was zb für geräusche und frequenzen gefiltert werden sollen, was für eine qualität der textausgabe und wie die software implementiert werden soll
 
 
 \subsection{Nichtfunktionen Anforderungen}
@@ -133,15 +133,15 @@ ID & Kategorie & Anforderung \\
 \hline
          NF02 & Latenz & Maximal zulässige Verzögerung der Audioverarbeitung\\
 \hline
-         NF03 & Genauigkeit & Maximal zulässige Wortfehlerrate der Transskription \\     % todo Wert einfügen
+         NF03 & Genauigkeit & Maximal zulässige Wortfehlerrate von x Prozent der Transskription \\     % todo Wert einfügen
 \hline
          NF04 & Ressourcen & Einhaltung der verfügbaren Rechen- und Speicherkapazitäten \\
 \hline
-         NF05 & Energieeffizienz & Einhaltung einer definerten Mindestbetriebdauer \\  %todo am bestsen einen Wert einfügen der für anwendung auf bau odedr  so sinnvoll ist
+         NF05 & Energieeffizienz & Einhaltung einer definerten Mindestbetriebdauer von x Stunden \\  %todo am bestsen einen Wert einfügen der für anwendung auf bau odedr  so sinnvoll ist
 \hline
-          NF06 & Sicherheit & Vermeidung gesundheitsgefährdender Schallpegelexposition \\
+         NF06 & Sicherheit & Vermeidung gesundheitsgefährdender Schallpegelexposition \\
 \hline
-          NF07 & Datenschutz & Schutz personenbezogener Sprachaufzeichnungen \\
+         NF07 & Datenschutz & Schutz personenbezogener Sprachaufzeichnungen \\
 \hline
          NF08 & Wartbarkeit & Nachvollziehbarer und dokumentierter Quellcode\\
 \hline
