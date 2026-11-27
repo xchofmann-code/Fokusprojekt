@@ -1,0 +1,209 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[table]{xcolor} % For \rowcolor
+\usepackage{siunitx}[=v2] % For 's' column type in tabular
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[table]{xcolor}
+\usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
+
+\title{Lastenheft}
+\author{Nisa, Esra, Rebeca, Timon, Felix, Tobias, Elmo}
+\date{November 2026}
+
+\begin{document}
+
+\maketitle
+ 
+
+\section{Auftraggeber}
+Auftraggeber: Steve Durstewitz M.sc, Prof. Dr. Claudia Lenk, Insitut BMT 
+
+
+\section{Einführung}
+\subsection{Ausgangszustand und Ist-Zustand}
+Das Open-Earable ist ein Open-Source Projekt des KIT -Karlsruher Institute of Technology- und umfasst die Hardware mit zwei Kopfhörer und das Github-Projekt mit der passenden Software. Die bisher verfügbaren Hardware Komponenten umfassen einen . Die bisherigen Softwareimplementierungen umfassen . 
+Die bisherigen Messwerte und Ergebnisse der Forschung des vorherigen Projektes sind uns zur Verfügung und sind die Basis unserer Aufgabenbereitung. 
+Jedgliche Hardwarebestandteile werden vollständig übernommen und die Basis ist die Software des Herstellers.
+Der aktuelle Leistungsstand der Geräuschunterdrückung und Sprachverarbeitung ist zu Projektbeginn nicht vollständig quantifiziert. Daher soll eine reproduzierbare messtechnische Untersuchung des bestehenden Systems als Grundlage für die weitere Softwareentwicklung erfolgen
+
+
+\subsection{Motivation}
+%Im Jahre 2025 beläuft sich die Anzahl der meldepflichtigen Arbeitsunfälle auf Rund 731 Tausend. Diese Zahl ist zwar im Vergleich zum Vorjahr gesunken, jedoch ist die Arbeit immer noch der dritthäufigste Ort an dem Unfälle geschehen. Jedoch beläuft sich diese Zahl nicht auf die subtilen Belastungen, die einem Arbeiter jedem Tag ausgesetzt sind, die sowohl körperliche als auch psychische (Folge-)Schäden auch längerfristig erhalten kann. Eine erhöhte Lärmbelästigung am Arbeitsplatz erhöht die Unfallwahrscheinlichkeit und ist für das Hörvermögen und psychische Unversehrtheit eine Gefahr. Vorallem Arbeitsumgebungen im Baugewerbe oder der Metallverarbeitung sind viele Umgebungsgeräusche Alltag der Arbeiter*Innen. Um die Gesundheit der Arbeitnehmer verstärkt zu Schützen wollen wir an der Filterung und Signalverarbeitung arbeiten. In diesem Zuge ist unser zweiter Fokus auf der Verarbeitung der Sprache zu lesbarem Text kommt auch zu Nutze.
+
+Der Arbeitsplatz ist der dritthäufigste Ort an dem Unfälle entstehen. Im Jahr 2025 wurden in Deutschland rund 731.000 meldepflichtige Arbeitsunfälle registriert. Neben akuten Unfallereignissen stellen auch langfristige Belastungen am Arbeitsplatz eine Gefahr für die körperliche und psychische Gesundheit von Beschäftigten dar. 
+
+Insbesondere in lärmintensiven Arbeitsumgebungen, beispielsweise im Baugewerbe oder in der Metallverarbeitung, können erhöhte Schallpegel das Hörvermögen beeinträchtigen, die Kommunikation erschweren und das Unfallrisiko erhöhen.
+
+Das Projekt untersucht daher die Möglichkeiten einer gezielten Unterdrückung von störenden Umgebungsgeräuschen unter Verwendung der OpenEarable-Plattform. Ergänzend soll die digitale Transkription gesprochener Sprache die Kommunikation in geräuschintensiven Umgebungen unterstützen.
+
+\subsection{Projektziel und Soll-Zustand}
+%Den jetzigen Stand der Signalfilterung zur Erheben anhand eigensdurchgeführter standartisierten Messungen und anhand dieser und einer Marktforschung die Tonverarbeitung anzupassen. Die Messdaten der vorherigen Gruppe werden in Betracht gezogen und mit unseren erhobenen Daten verglichen. Am Ende unseres Projektes sollen die Störgeräusche weniger vernommen werden und in einem Gespräch (auch in lauter Umgebung) die gesprochenen Worte als Text auf einer ausgewählten Bildausgabe verschriftlich werden.  
+Unser Projekt wird sich mit den drei Zielen auseinandersetzten:
+\begin{enumerate}
+    \item Ziel 1: Geräuschutnerdrückung
+
+    \item Ziel 2: Sprachverständlichkeit
+
+    \item Ziel 3 Sprachtransskription
+\end{enumerate}
+
+\subsection{Abgrenzung des Projekts}
+Ziel dieser Studentenarbeit ist es innerhalb der vorgegebenen Zeiten ein 
+zwei Untergruppen sich die folgenden Ziele zu erarbeiten: 
+\begin{itemize}
+    \item Erfassen alles theoretischen Grundlagen der technischen Umsetzung, inklusiver Marktforschung
+    \item Überprüfung der praktischen Umsetzung der Ziele im Rahmen der technisch- und softwarebegrenzenden Möglichkeiten
+    \item Umsetzung der Ziele in der Software
+    \item Durchführung Messungen zum Überprüfen der bisherigen Software und die Ergänzungen der Gruppe
+\end{itemize}
+
+Eine Untergruppe besteht aus . Diese beschäftigt sich mit Text-to-Speech, indem Gespräche in unmittelbarer Umgebung verarbeitet werden und in einer Textform ausgegeben wird. \\
+Die andere Untergruppe, bestehend aus Felix, Elmo, beschäftigt sich mit der Filterung des Umgebungslärmes, das im Arbeitumfeld zu einer großen Belastung und gesundheitlichen Bedrohung wird. Unser Ziel ist es den Hintergrundlärm zu messen, analysieren und eine Active Noise Cancelling und besser Geräuschfilterung zu implementieren.\\
+
+Dieses Lastenheft legt die Anforderungen für ein Gerät zur Schallmessung, Filterung und Sprachausgabe. Zusätzlich werden die Rahmenbedingungen beschrieben in welchen dieses Projekt zu verlaufen hat, um das Fokusprojekt erfolgreich zu absolvieren.
+
+\pagebreak
+
+\section{Projektorganisation}
+Die Gruppe, bestehend aus sieben Studierenden, setzt sich aus folgenden Aufgaben und Untergruppen zusammen:
+Die Aufgaben Projektmanager und Softwareimplementierung übernimmt Elmo Hofmann. Die Marktforschung und Erhebung wichtiger Fallzahlen übernimmt Tobias Holbach. Timon Kramer wird sich mit der Hardware der Geräte auseinandersetzten.
+
+
+\subsection{Untergruppe: Speech-To-Text}
+Die Untergruppe, deren Fokus auf Speech-to-Text liegt, setzt sich zusammen aus: \\
+Die Hauptaufgaben dieser setzten sich zusammen aus:
+\begin{itemize}
+    \item Überprüfung der Forschungsergebnisse der vorherigen Gruppe
+    \item Analyse der physikalischen Gegebenheit sowohl von sprachlicher- als auch textlicher Seite
+    \item Erfassung der konkreten nötigen Softwareumgebung und Filterungsvorraussetzng 
+    \item Zusammenarbeit mit der anderen Untergruppe in Bezug auf Signalverarbeitung und Filterung 
+\end{itemize}
+
+\subsection{Untergruppe: ANC}
+Die Untergruppe, deren Fokus auf der Geräuschfilterung liegt, setzt sich zusammen aus Felix, Elmo, 
+Die Hauptaufgaben dieser setzt sich zusammen aus:
+\begin{itemize}
+    \item Erfassung der technischen Gegebenheiten des Gerätes und notwendigen Signalfilterung
+    \item Abgleichen des resultierenden möglichen Rahmens zur Umsetzung der Filtrung
+    \item Erfassung der bisherigen Softwareimplementationen und die folgenden zuoptmierenden Stellen
+    \item Absprache zuhalten mit der anderen Untergruppe in Bezug auf Signalverarbeitung und Filterung
+\end{itemize}
+
+\subsection{Gemeinsamen Aufgaben}
+Die Aufgaben, die die ganze Gruppe betreffen, sind eine organisierte Arbeit der Themen und guter Kommunikation des Fortschrittes und geplanter Arbeitsschritte. Das Lastenheft, Pflichtenheft und die Dokumentation des Projektes mit zusätzlicher Präsentation wird von allen organisiert. 
+Das große gemeinsame Ziel ist es die bestmögliche Filterung von Umgebungsgeräuschen im Bereich von Hz zu erfassen. Diesen Bereich wird im Rahmen der Software und technischen Rahmenbedingungen gilt es sop gut als möglich nicht hörbar zu machen für den Nutzer. Während dieser Bereich nun unterdrücktz wird, soll es nun möglich gemacht werden Gespräche zu verstärkend hörbar zu machen und diese an einer passenden Schnittstelle in Textform sichtbar zu machen.
+
+
+
+\section{Anforderungen an das System}
+
+\subsection{Allgemeine Anforderungen}
+Die allgemeine Forderung, die wir an unsere Umsetzung setzten setzt sich wie folgt zusammen:
+\begin{itemize}
+    \item Die Unterdrückung der Geräusche im Bereich von Hz um ein Drittel zu steigern
+    \item Die Textausgabe sicher von einfachen Gesprächen zu ermöglichen 
+    \item Die Softwareimplementierung möglichst perfomant und laufzeitschonend umzusetzen
+\end{itemize}
+
+\subsection{Funktionale Anforderungen}
+%Todo mit Rauschunerdrückkung
+
+\subsection{Nichtfunktionen Anforderungen}
+%todo 
+
+
+\subsection{Gruppenspezifische Anforderungen}
+Unsere Gruppe setzt sich eine möglichst effiziente und geordnete Arbeit in Untergruppen mit guter Kommunikation als wichtiges Ziel anzusehen. Jegliche Fortschritte und Ergebnisse werden in regelmäßig durchgeführten Sitzungen ausgetauscht und intermittend für alle Mitglieder einsehbar digital festgehalten.
+Nach der Erhebung der theoretischen Erfassung aller nötigen Informationen werden diese kummuliert festgehalten und als Basis genutzt für die folgende Arbeit. 
+Der Projektleiter stellt sicher, dass der Kommunikationskanal gepflegt wird und intergruppunell aufrecht gehalten wird. Zusätzlich setzt er sich für ein gutes Arbeisklima und das Wohlergehen aller Mitglieder ein. Jeder der Gruppenmitglieder halten sich an die Richtlinien der Nettiquette der Universität Ulm und dem respektvollen Umgang untereinander und den Ihnen zur Verfügung gestellten Materialien. Dies Beinhaltet die Unversehrtheit der Kopfhörer als auch des Datenschutzes.
+Das wissenschaftliche Arbeiten, Erlernen von neuem Wissen und das Aufrechterhaltens eines guten wissenschalftlichen Forschungsstandards steht an erster Stelle.
+
+
+\subsection{Priorisierung der Anforderungen}
+Als oberstes Ziel steht das Gruppenverständnis, dass Gemeinsam an einem großen Ziel arbeitet wird, selbst wenn die Aufgaben der einzelnen Mitglieder sich auch vonaneinader unterscheiden. Eine gute Kommunikation und ständige Unterrichtung Zwischenstände sind als verständlich anzusehen. 
+Danach folgt die Arbeit an Signalverarbeitung und -filterung mit anschlißenender Textausgabe.
+
+
+\section{Technische Rahmenbedingungen}
+
+\subsection{Hardware}
+Vom Hersteller sind folgende Bestandteile, neben der Aufbewahrung und austauschbaren Ohrpads, in den Kopfhörern verbaut:
+
+\begin{itemize}
+    \item Folgende Bestandteile sind Sensoren:
+    \subitem  Eine 9-Achsen Bewegungssensor (zusätzliche Messung möglicher Deformationen des Ohrkanals)
+    \subitem ein Drei-Wellenlänge Photoplethysmograph (infratrot, rot und grün PPG Sensoren + Pulsoximeter)
+    \subitem einen Drucksensor (Messung des Innendruck des Hörkanals) 
+    \subitem Zwei Mikrophone (Luftübertragung und Knochenübertragung, Ultra- und Infrasound, Schnittstelle zur Aufnahme oder des Streamings)
+    \subitem einen optischen Temperatursensor (Messung Hauttemperatur)
+    \item Restliche verbaute Bestandteile:
+    \subitem Eine Knopfbatterie
+    \subitem Einen USB-Anschluss
+    \subitem einen Druckknopf und eine RGB-LED
+    \subitem Dynamic Driver-Lautsprecher
+    \item Das Außengehäuse
+\end{itemize}  
+    
+\subsection{Software}
+Die Software wird vom GitHub des Herstellers bezogen %todo einfügen des links als quelle vom github
+
+\subsection{Schnittstelle}
+Die Kopfhörer sind sowohhl Speicher für die Software als auch Träger der Sensoren, somit wird die Aufzeichnung der Messungen und Daten lediglich auf einer extern engefügten SD-Karte gespeichert falls geofordert oder wird kabellos gestreamed.
+
+\subsection{Messgrößen und Messbereiche}
+
+\begin{tabular}{ |s|p{2cm}|p{2cm}|  }
+%\newcolumntype{s}{>{\columncolor[HTML]{AAACED}} p{3cm}}
+\hline
+\rowcolor{Thistle} 
+\arrayrulecolor[HTML]{DB5800}
+\centering
+%\multicolumn{3}{|c|}{Sensoren} \\
+Sensor & Micro-SD Aufzeichnung & Kabellose Übertragung \\
+\hline
+         Luftmikrophon (Inner-/Außerohrs) & 48 kHz & 48 kHz \\
+\hline
+         Knochenübertragungssensor der Beschleunigungen & 6,4 kHz & 800 Hz \\
+\hline
+         PPG-Sensor & 4,096 kHz & 512 Hz \\
+\hline
+         9-Achsen Bewegungsensor & 800 Hz & 100 Hz \\
+\hline
+         Temperatursensor & 64 Hz & 64 Hz \\
+\hline
+         Ohrkanaldrucksensor & 200 Hz & 200 Hz \\
+\hline
+\end{tabular}
+
+\section{Validierung und Abnahmekriterien}
+    \subsection{Mess- und Testbedingungen}
+    \subsection{Bewertung der Sprachtranskription}
+    \subsection{Bewertung der Geräuschunterdrückung}
+
+\section{Zeitplan und Meilensteine}
+
+\section{Risikoeinschätzung}
+    \subsection{Technische Risiken}
+    \subsection{Gesundheitliche Risiken}
+    \subsection{Datenschutz}
+    \subsection{Projektbezogene Risiken}
+
+\section{Erwartete Projektergebnisse und Deliverables}
+
+Das Gerät muss folgende Anforderungen erfüllen:
+
+Das Gerät muss in der Lage sein, Sprache zu erkennen und diese dokumentieren zu können.
+Das Gerät muss in der Lage sein, nicht gewünschte Umgebungsgeräusche optimal zu filtern.
+Die Messungen muss nicht-invasiv erfolgen.
+Das System muss in der Lage sein, die Messdaen in digitaler Form aufzuzeichnen und zu visualisieren.
+Das Gerät muss sicher sein. Die Stromversorgung während des Betriebs soll mittels eines Akkus sichergestellt werden.
+Das Gerät muss das Pulswellenlaufzeitverfahren mittels EKG und PPG anwenden.
+Die Algorithmen für die Berechnungen müssen validiert sein.
+Technische Anforderungen
+Die technischen Anforderungen des Gerätes umfassen: 'sind der Website zu entnehmen'
+
+
+
+\end{document}
